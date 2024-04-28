@@ -4,7 +4,7 @@
         <parameter name="browser" value="chrome"/>
         <parameter name="URL" value="https://coffe-soft.com/"/>
         <classes>
-            <class name="Web.LoginTest"/>
+            <class name="Web.CreatePostTest"/>
         </classes>
     </test>
 

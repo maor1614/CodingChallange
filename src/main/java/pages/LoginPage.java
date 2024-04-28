@@ -1,5 +1,6 @@
 package pages;
 
+import base.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 
-public class LoginPage {
+public class LoginPage extends BaseTest {
     private WebDriver driver;
     private Logger log;
 
@@ -25,14 +26,14 @@ public class LoginPage {
 
     // Page Actions
     public void setUsername(String username) {
-        log.info("Setting username: " + username);
+        System.out.println("Setting username: " + username);
         WebElement usernameField = driver.findElement(usernameLocator);
         usernameField.clear();
         usernameField.sendKeys(username);
     }
 
     public void setPassword(String password) {
-        log.info("Setting password.");
+        System.out.println("Setting password.");
         WebElement passwordField = driver.findElement(passwordLocator);
         passwordField.clear();
         passwordField.sendKeys(password);
